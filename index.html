@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mesecni budzet</title>
+    <link rel="stylesheet" href="./src/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+
+    <!-- Gornji DIV koji drzi finalne podatke i kalkulacije -->
+
+    <div class="top-div">
+      <div class="budget">
+        <div class="budget-naslov">
+          Mesecni budzet u <span class="naslov-month">septembru</span>:
+        </div>
+
+        <div class="budget-vrednost-final">+ </div>
+
+        <div class="budget-prihod clearfix">
+          <div class="budget-prihod-txt">Prihod</div>
+          <div class="right">
+            <div class="budget-prihod-vrednost"></div>
+            <div class="budget-prihod-procenat">&nbsp;</div>
+          </div>
+        </div>
+
+        <div class="budget-rashod clearfix">
+          <div class="budget-rashod-txt">Rashod</div>
+          <div class="right clearfix">
+            <div class="budget-rashod-vrednost"></div>
+            <div class="budget-rashod-procenat"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom">
+      <!-- INPUTI -->
+
+      <div class="add">
+        <div class="add-container">
+          <!-- FORMA za input -->
+
+          <form action="">
+            <select class="add-type">
+              <option value="income" selected>+</option>
+              <option value="expenses">-</option>
+            </select>
+
+            <input
+              type="text"
+              class="add-description"
+              placeholder="Opis potrosnje"
+            />
+
+            <input type="number" class="add-value" placeholder="Iznos" />
+            <button class="add-btn"><i class="fa fa-check"></i></button>
+          </form>
+          <div class="error-field"></div>
+        </div>
+       
+      </div>
+
+      <!-- Podaci o prihodu, detalji -->
+
+      <div class="container clearfix">
+        <div class="prihod">
+          <h2 class="prihod-naslov">Prihodi</h2>
+
+          <div class="prihod-lista"></div>
+        </div>
+
+        <!-- Podaci o rashodu, detalji -->
+
+        <div class="rashod">
+          <h2 class="rashod-naslov">Rashodi</h2>
+
+          <div class="rashod-lista"></div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="./src/index.js"></script>
+  </body>
+</html>

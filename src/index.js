@@ -19,13 +19,7 @@
 
 
 
-
-
 import { dataPrihod, dataRashod, addPrihod, addRashod, deleteByIdPrihod, deleteByIdRashod, formatNumber, calculateTotalPrihod, calculateTotalRashod, preostak, procentiRashod, procentiRashodUkupno } from "./service.js";
-
-
-// Treba selektovati SVE inpute i polja 
-
 
 let forma = document.querySelector('form')
 
@@ -38,17 +32,12 @@ let inputIznos = document.querySelector('.add-value')
 
 let divError = document.querySelector('.error-field')
 
-
-
 let budzetPreostatak = document.querySelector('.budget-vrednost-final')
 let budzetPrihod = document.querySelector('.budget-prihod-vrednost')
 let budzetRashod = document.querySelector('.budget-rashod-vrednost')
 
 let procentiUkupno = document.querySelector('.budget-rashod-procenat')
 
-
-
-//funkcija koja radi upisivanje u gornji deo kalkulacija
 
 function topBudzet (niz1, niz2, a, b) {
 
@@ -60,15 +49,9 @@ function topBudzet (niz1, niz2, a, b) {
             a.textContent =`  ${preostak(calculateTotalPrihod(niz1),calculateTotalRashod(niz2))}` 
             b.textContent = `${procentiRashodUkupno(niz1, niz2)}%`
         }
-
 }
 
-
-//funkcija koja dodaje u DOM
-
 function addToDom (niz){
-
-    //kreacija elemenata, povezivanje, dodavanje teksta
 
     let item = document.createElement('div')
     item.classList.add('item')
